@@ -28,12 +28,79 @@
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
+            label1 = new Label();
+            txtBusqueda = new TextBox();
+            btnBuscar = new Button();
+            lnkApi = new LinkLabel();
+            lstComics = new ListBox();
+            SuspendLayout();
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(12, 23);
+            label1.Name = "label1";
+            label1.Size = new Size(62, 15);
+            label1.TabIndex = 0;
+            label1.Text = "Busqueda:";
+            // 
+            // txtBusqueda
+            // 
+            txtBusqueda.Location = new Point(12, 41);
+            txtBusqueda.Name = "txtBusqueda";
+            txtBusqueda.Size = new Size(129, 23);
+            txtBusqueda.TabIndex = 1;
+            // 
+            // btnBuscar
+            // 
+            btnBuscar.Location = new Point(12, 83);
+            btnBuscar.Name = "btnBuscar";
+            btnBuscar.Size = new Size(129, 34);
+            btnBuscar.TabIndex = 2;
+            btnBuscar.Text = "Buscar";
+            btnBuscar.UseVisualStyleBackColor = true;
+            btnBuscar.Click += btnBuscar_Click;
+            // 
+            // lnkApi
+            // 
+            lnkApi.AutoSize = true;
+            lnkApi.Location = new Point(159, 9);
+            lnkApi.Name = "lnkApi";
+            lnkApi.Size = new Size(386, 15);
+            lnkApi.TabIndex = 3;
+            lnkApi.TabStop = true;
+            lnkApi.Text = "https://marvel.emreparker.com/v1/search/issues?q=secret+wars&limit=5";
+            // 
+            // lstComics
+            // 
+            lstComics.FormattingEnabled = true;
+            lstComics.Location = new Point(159, 41);
+            lstComics.Name = "lstComics";
+            lstComics.Size = new Size(529, 364);
+            lstComics.TabIndex = 4;
+            // 
+            // Form1
+            // 
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(712, 429);
+            Controls.Add(lstComics);
+            Controls.Add(lnkApi);
+            Controls.Add(btnBuscar);
+            Controls.Add(txtBusqueda);
+            Controls.Add(label1);
+            Name = "Form1";
             Text = "Form1";
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
+
+        private Label label1;
+        private TextBox txtBusqueda;
+        private Button btnBuscar;
+        private LinkLabel lnkApi;
+        private ListBox lstComics;
     }
 }
